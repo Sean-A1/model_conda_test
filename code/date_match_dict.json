@@ -4674,5 +4674,28 @@
     "STL@LAD",
     "TB@LAA",
     "TOR@COL"
+  ],
+  "250807": [
+    "ATH@WSH",
+    "CIN@PIT",
+    "CWS@SEA",
+    "MIA@ATL"
+  ],
+  "250808": [
+    "CIN@PIT",
+    "ATH@BAL",
+    "HOU@NYY",
+    "LAA@DET",
+    "MIA@ATL",
+    "CLE@CWS",
+    "PHI@TEX",
+    "KC@MIN",
+    "NYM@MIL",
+    "CHC@STL",
+    "COL@AZ",
+    "BOS@SD",
+    "TB@SEA",
+    "TOR@LAD",
+    "WSH@SF"
   ]
 }

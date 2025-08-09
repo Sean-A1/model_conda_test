@@ -1,0 +1,108 @@
+오케이 엑셀로 찍어보니까 X에 "game_pk", "date_str", "match_id" 가 성공적으로 추가되었고 meta 거랑 비교했는데 순서도 맞는 거 같아.
+왜 X에 이걸 가져왔냐면 이제 predict_match_dict 를 보고 new data 를 만들거야.
+
+pred_match_dict 는 예측해야 하는 매치의 리스트이고
+pred_match_dict 가 정해지면 그 리스트에 대해서, 각 매치에 대해서 매번 model 을 다르게 구상하기로 즉, train, valid, test를 다르게 구성하기로 했지.
+왜냐하면 new data 를 만드는데 사용되는 데이터 양이 매번 달라져서 train, valid, test 도 그거 에 맞춰지니까
+
+pred_match_dict 에 있는 매치 만큼 new data 한 줄을 만들어내야 한다는 소리인데, 그때는 이전 데이터 참조 (rolling avg 비슷한 방식) 으로 home, away 팀 각각 가장 최근 경기를 window 크기만큼 가지고 와서 압축하기로 했어. 가져오는건 당연히 X	(4115, 107) 여기서 가져오는 거고.
+
+예를 들자면
+
+7/30	MIA@STL
+
+8/06	MIL@ATL
+8/07	MIA@ATL
+8/08	MIA@ATL
+
+뭐 이런식으로 매치가 있다고 하자. 실제 매치이긴 해. 여기서 8/8 경기는 아직 안 했고 예측해야 하는 상황이라고 해보자고.
+그럼 MIA 가 away 인 최근 경기를 window 만큼 찾아야 하고 ATL이 home 인 경우를 window 만큼 찾아야 하는 거지. window 는 3이라고 해보자고.
+MIA 는 7/30, 8/06, 8/07 이 3개의 한 줄 데이터가 필요하다는 소리야.
+ATL 은 8/06, 8/07 이렇게 두 개가 있고 위의 경기들을 더 뒤져서 1경기를 더 찾아야 해.
+
+그렇게 home, away 각각 3줄씩을 찾으면 그걸 1줄로 압축을 해. 우리가 summarize 하던 거랑 비슷하게 하게 되겠지.
+그럼 home, away 각각에 대해 1줄이 나오게 될텐데 이건 MIA@??  ??@ATL  이런 정보의 상태지. 혼합이 됐으니까.
+이걸 MIA@ATL로 만들려고 is_pitch 를 해서 필요한 피쳐만 남기고 둘이 융합하잖아. 그렇게 하면 MIA@ATL 이 한줄이 나오는거야. 이러면 1 매치에 대해서 예측이 가능해진거지. 이걸 완성된 모델에 넣어주면 확률이 나오는거고. 이걸 pred_match_dict 에 있는 모든 매치에 대해서 적용하면 되거든?
+
+
+이게 남은 과정들이니까 단계별로 해보자. 그럼 첫번째 단계는
+
+1. pred_match_dict 에 있는 각 매치에 대해서 new data 를 만들기 위한 재료 df 명단을 window 만큼 X 에서 가져오기
+
+
+이거 어떤 느낌이냐면
+
+{
+  "250522": [
+    "ATL@WSH",
+    "CLE@DET",
+    "LAA@ATH",
+    "MIL@PIT",
+    "PHI@COL",
+    "SD@TOR",
+    "SEA@HOU",
+    "TEX@NYY"
+  ],
+
+
+
+
+이런거 있으면 ATL@WSH 가 첫 번째 매치고, 250521 부터 과거 데이터 뒤지면서 ATL이 away, WSH이 home인 경기 window 만큼 game_pk, date_str, match_id 정보를 찾아서 파일로 가지고 있으면 돼. df를 우선 꺼내올 필요도 없어. 이것도 명단으로 심플하게 가지고있고, 모든 pred_match_dict 에 대해서 new data 재료들 명단이 모이면 그때 명단을 보면서 하나씩 합성하면 되니까. 그니까 설계도를 만들자는거지. 이걸 하기 위해 X 에 game_pk, date_str, match_id 를 집어넣은거고
+
+그럼 이걸 파일로 관리할때 어떤 파일로 무슨 형태로 보관하는게 제일 나은지를 알려줘.
+
+250522 match1 ATL@WSH ATL(away) window1 game_pk, date_str, match_id
+250522 match1 ATL@WSH WSH(home) window1 game_pk, date_str, match_id
+250522 match1 ATL@WSH ATL(away) window2 game_pk, date_str, match_id
+250522 match1 ATL@WSH WSH(home) window2 game_pk, date_str, match_id
+250522 match1 ATL@WSH ATL(away) window3 game_pk, date_str, match_id
+250522 match1 ATL@WSH WSH(home) window3 game_pk, date_str, match_id
+
+
+고전적으로는 이런식으로 excel 로 관리하면 필요한 정보는 다 있겠다만, 더 좋은 데이터 저장 방식이 있을까?
+
+
+A. JSON Lines 로 관리하라
+
+
+좋아 JSON Lines 로 관리하자. 그럼
+
+# predict_match_dict 데이터 불러오기
+with open(pred_json_path, 'r') as f:
+    pred_match_dict = json.load(f)
+
+pred_match_dict
+
+
+이 코드에 이어서 pred_match_dict 보고 X 를 바탕으로 JSON Lines 을 만들면 되는거지? 코드를 적어줄래?
+
+
+A. "pretty_pred_match_dict.jsonl" 생성완료
+
+
+좋아. 확인해보니까 내가 원하는대로 파일이 만들어졌어.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
