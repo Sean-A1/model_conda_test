@@ -1121,5 +1121,39 @@
     "CIN@PIT",
     "CWS@SEA",
     "MIA@ATL"
+  ],
+  "250808": [
+    "ATH@BAL",
+    "BOS@SD",
+    "CHC@STL",
+    "CIN@PIT",
+    "CLE@CWS",
+    "COL@AZ",
+    "HOU@NYY",
+    "KC@MIN",
+    "LAA@DET",
+    "MIA@ATL",
+    "NYM@MIL",
+    "PHI@TEX",
+    "TB@SEA",
+    "TOR@LAD",
+    "WSH@SF"
+  ],
+  "250809": [
+    "ATH@BAL",
+    "BOS@SD",
+    "CHC@STL",
+    "CIN@PIT",
+    "CLE@CWS",
+    "COL@AZ",
+    "HOU@NYY",
+    "KC@MIN",
+    "LAA@DET",
+    "MIA@ATL",
+    "NYM@MIL",
+    "PHI@TEX",
+    "TB@SEA",
+    "TOR@LAD",
+    "WSH@SF"
   ]
 }
