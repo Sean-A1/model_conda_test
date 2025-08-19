@@ -386,10 +386,17 @@ A. 모듈화 하라
 결국 아래 작성한 코드들을 모듈화 하는게 답이면 거의 전체 구조를 다시 짜야겠네. 오래 걸리는 작업이겠네.
 그래도 확장성을 위해서는 반드시 필요하다고 생각되니까 단계별로 해야겠다.
 
-그럼 모듈화 할 함수 중 첫 번째를 만들어보자. 
-첫번째로  pretty_pred_match_dict.jsonl   을 받아서 한 매치정보를 끌어오고  train_available_date + 1 부터 pred_date  까지를 new,
 
-그리고 내가 정한 start date 부터 train_available_date  까지를 train, valid, test 로 쓸거야. 
+
+그럼 모듈화 할 함수 중 첫 번째를 만들어보자. 
+첫번째로  pretty_pred_match_dict.jsonl   을 받아서 한 매치정보를 끌어오고, 
+그 중  train_available_date + 1 부터 pred_date  까지를 new 로 쓰자. train_available_date 는 order 애들이 침범하지 않은 첫 날짜거든?
+그 의미는 train valid test 로 사용할 수 있다는 이야기지. 그래서 아예 이 영역을 할당하고 못 건들게 하려고.
+그리고 train_available_date + 1 부터 pred_date 까지를 new 로 쓰고 pred_date + 1 이
+예측하는 매치의 날짜가 되는거지. 이게 정해지면 X	(4115, 107) 에서 해당하는 정보들만 빼오면 돼. 이미 X는 매치가 한 줄로 압축되어있어.
+
+
+
 
 train, valid, test 를 split 하는건 옵션을 선택할 수 있게 해줘. 일단 생각나는 option 은 
 
@@ -401,9 +408,27 @@ split option 2 : 날짜로 split
 ex) train_start = 240329, train_end =  ~~~   , valid
 
 
-이걸 함수로 만들어줘
+
+이렇게 하면 train, valid, test, new 에 대해서 X 를 어떻게 쓸지 한 매치에 대해 정해졌어.
+여기까지 코드로 만들어줘
 
 
+
+A. split_for_one_match()
+
+
+
+
+
+파일을 열어보니 정확히 내가 바라는대로야. 어차피 Excel 로 뽑아보는 부분은 계속 늘어날거라 아래쪽에 주석으로 가지고있을거고,
+
+이제   # ----------------------------- 3) new 합성  
+
+부분을 만들어보자.
+
+이건 아래쪽 코드에 Prediction 부분으로 존재하는데 이걸 그대로 쓰려고. 이제 루프 안에 정보들이 꽤 있어서 이걸 이용해서 똑같은 과정을 거치면 될 거 같아.
+
+일단 내가 코드를 반복문에 맞게 넣어볼테니 맞게 작동할지 검사좀 해줘
 
 
 
