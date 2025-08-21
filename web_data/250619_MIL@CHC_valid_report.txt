@@ -1,0 +1,45 @@
+[VALID REPORT] pred_date=250619, match_id=MIL@CHC
+n_valid=328
+
+== Sigmoid ==
+Best Threshold: 0.540 (F1=0.9318)
+Accuracy: 0.9268
+Precision: 0.9762
+Recall: 0.8913
+F1: 0.9318
+Brier: 0.06445
+AUC: 0.9642
+Confusion Matrix: [[140, 4], [20, 164]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.88      0.97      0.92       144
+           1       0.98      0.89      0.93       184
+
+    accuracy                           0.93       328
+   macro avg       0.93      0.93      0.93       328
+weighted avg       0.93      0.93      0.93       328
+
+------------------------------------------------------------
+== Isotonic ==
+Best Threshold: 0.410 (F1=0.9318)
+Accuracy: 0.9268
+Precision: 0.9762
+Recall: 0.8913
+F1: 0.9318
+Brier: 0.05615
+AUC: 0.9693
+Confusion Matrix: [[140, 4], [20, 164]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.88      0.97      0.92       144
+           1       0.98      0.89      0.93       184
+
+    accuracy                           0.93       328
+   macro avg       0.93      0.93      0.93       328
+weighted avg       0.93      0.93      0.93       328
+
+------------------------------------------------------------

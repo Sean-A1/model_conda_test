@@ -1,0 +1,43 @@
+[TEST REPORT] pred_date=250812, match_id=PHI@CIN
+n_test=403
+
+== Sigmoid == (thr from valid = 0.380)
+Accuracy: 0.9107
+Precision: 0.9167
+Recall: 0.9248
+F1: 0.9207
+Brier: 0.05888
+AUC: 0.9727
+Confusion Matrix: [[158, 19], [17, 209]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.90      0.89      0.90       177
+           1       0.92      0.92      0.92       226
+
+    accuracy                           0.91       403
+   macro avg       0.91      0.91      0.91       403
+weighted avg       0.91      0.91      0.91       403
+
+------------------------------------------------------------
+== Isotonic == (thr from valid = 0.300)
+Accuracy: 0.9107
+Precision: 0.9167
+Recall: 0.9248
+F1: 0.9207
+Brier: 0.06142
+AUC: 0.9724
+Confusion Matrix: [[158, 19], [17, 209]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.90      0.89      0.90       177
+           1       0.92      0.92      0.92       226
+
+    accuracy                           0.91       403
+   macro avg       0.91      0.91      0.91       403
+weighted avg       0.91      0.91      0.91       403
+
+------------------------------------------------------------

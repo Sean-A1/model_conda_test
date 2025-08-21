@@ -1,0 +1,43 @@
+[TEST REPORT] pred_date=250603, match_id=COL@MIA
+n_test=325
+
+== Sigmoid == (thr from valid = 0.510)
+Accuracy: 0.8800
+Precision: 0.9329
+Recall: 0.8274
+F1: 0.8770
+Brier: 0.08321
+AUC: 0.9557
+Confusion Matrix: [[147, 10], [29, 139]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.84      0.94      0.88       157
+           1       0.93      0.83      0.88       168
+
+    accuracy                           0.88       325
+   macro avg       0.88      0.88      0.88       325
+weighted avg       0.89      0.88      0.88       325
+
+------------------------------------------------------------
+== Isotonic == (thr from valid = 0.300)
+Accuracy: 0.8800
+Precision: 0.9329
+Recall: 0.8274
+F1: 0.8770
+Brier: 0.09274
+AUC: 0.9475
+Confusion Matrix: [[147, 10], [29, 139]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.84      0.94      0.88       157
+           1       0.93      0.83      0.88       168
+
+    accuracy                           0.88       325
+   macro avg       0.88      0.88      0.88       325
+weighted avg       0.89      0.88      0.88       325
+
+------------------------------------------------------------

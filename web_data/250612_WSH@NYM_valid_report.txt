@@ -1,0 +1,45 @@
+[VALID REPORT] pred_date=250612, match_id=WSH@NYM
+n_valid=325
+
+== Sigmoid ==
+Best Threshold: 0.470 (F1=0.9366)
+Accuracy: 0.9292
+Precision: 0.9551
+Recall: 0.9189
+F1: 0.9366
+Brier: 0.06157
+AUC: 0.9660
+Confusion Matrix: [[132, 8], [15, 170]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.90      0.94      0.92       140
+           1       0.96      0.92      0.94       185
+
+    accuracy                           0.93       325
+   macro avg       0.93      0.93      0.93       325
+weighted avg       0.93      0.93      0.93       325
+
+------------------------------------------------------------
+== Isotonic ==
+Best Threshold: 0.300 (F1=0.9392)
+Accuracy: 0.9323
+Precision: 0.9605
+Recall: 0.9189
+F1: 0.9392
+Brier: 0.05401
+AUC: 0.9717
+Confusion Matrix: [[133, 7], [15, 170]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.90      0.95      0.92       140
+           1       0.96      0.92      0.94       185
+
+    accuracy                           0.93       325
+   macro avg       0.93      0.93      0.93       325
+weighted avg       0.93      0.93      0.93       325
+
+------------------------------------------------------------

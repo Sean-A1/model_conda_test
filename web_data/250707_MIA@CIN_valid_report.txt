@@ -1,0 +1,45 @@
+[VALID REPORT] pred_date=250707, match_id=MIA@CIN
+n_valid=360
+
+== Sigmoid ==
+Best Threshold: 0.440 (F1=0.8852)
+Accuracy: 0.8833
+Precision: 0.8950
+Recall: 0.8757
+F1: 0.8852
+Brier: 0.07986
+AUC: 0.9566
+Confusion Matrix: [[156, 19], [23, 162]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.87      0.89      0.88       175
+           1       0.90      0.88      0.89       185
+
+    accuracy                           0.88       360
+   macro avg       0.88      0.88      0.88       360
+weighted avg       0.88      0.88      0.88       360
+
+------------------------------------------------------------
+== Isotonic ==
+Best Threshold: 0.430 (F1=0.8852)
+Accuracy: 0.8833
+Precision: 0.8950
+Recall: 0.8757
+F1: 0.8852
+Brier: 0.07145
+AUC: 0.9630
+Confusion Matrix: [[156, 19], [23, 162]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.87      0.89      0.88       175
+           1       0.90      0.88      0.89       185
+
+    accuracy                           0.88       360
+   macro avg       0.88      0.88      0.88       360
+weighted avg       0.88      0.88      0.88       360
+
+------------------------------------------------------------

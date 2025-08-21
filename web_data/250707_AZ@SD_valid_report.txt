@@ -1,0 +1,45 @@
+[VALID REPORT] pred_date=250707, match_id=AZ@SD
+n_valid=355
+
+== Sigmoid ==
+Best Threshold: 0.650 (F1=0.8802)
+Accuracy: 0.8873
+Precision: 0.9671
+Recall: 0.8077
+F1: 0.8802
+Brier: 0.08482
+AUC: 0.9503
+Confusion Matrix: [[168, 5], [35, 147]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.83      0.97      0.89       173
+           1       0.97      0.81      0.88       182
+
+    accuracy                           0.89       355
+   macro avg       0.90      0.89      0.89       355
+weighted avg       0.90      0.89      0.89       355
+
+------------------------------------------------------------
+== Isotonic ==
+Best Threshold: 0.400 (F1=0.8829)
+Accuracy: 0.8901
+Precision: 0.9735
+Recall: 0.8077
+F1: 0.8829
+Brier: 0.07479
+AUC: 0.9572
+Confusion Matrix: [[169, 4], [35, 147]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.83      0.98      0.90       173
+           1       0.97      0.81      0.88       182
+
+    accuracy                           0.89       355
+   macro avg       0.90      0.89      0.89       355
+weighted avg       0.90      0.89      0.89       355
+
+------------------------------------------------------------

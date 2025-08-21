@@ -1,0 +1,43 @@
+[TEST REPORT] pred_date=250525, match_id=MIA@LAA
+n_test=299
+
+== Sigmoid == (thr from valid = 0.680)
+Accuracy: 0.8963
+Precision: 0.9577
+Recall: 0.8447
+F1: 0.8977
+Brier: 0.07625
+AUC: 0.9574
+Confusion Matrix: [[132, 6], [25, 136]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.84      0.96      0.89       138
+           1       0.96      0.84      0.90       161
+
+    accuracy                           0.90       299
+   macro avg       0.90      0.90      0.90       299
+weighted avg       0.90      0.90      0.90       299
+
+------------------------------------------------------------
+== Isotonic == (thr from valid = 0.430)
+Accuracy: 0.8963
+Precision: 0.9577
+Recall: 0.8447
+F1: 0.8977
+Brier: 0.08050
+AUC: 0.9540
+Confusion Matrix: [[132, 6], [25, 136]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.84      0.96      0.89       138
+           1       0.96      0.84      0.90       161
+
+    accuracy                           0.90       299
+   macro avg       0.90      0.90      0.90       299
+weighted avg       0.90      0.90      0.90       299
+
+------------------------------------------------------------

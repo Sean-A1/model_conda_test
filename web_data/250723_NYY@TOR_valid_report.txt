@@ -1,0 +1,45 @@
+[VALID REPORT] pred_date=250723, match_id=NYY@TOR
+n_valid=386
+
+== Sigmoid ==
+Best Threshold: 0.680 (F1=0.8982)
+Accuracy: 0.8990
+Precision: 0.9829
+Recall: 0.8269
+F1: 0.8982
+Brier: 0.08443
+AUC: 0.9497
+Confusion Matrix: [[175, 3], [36, 172]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.83      0.98      0.90       178
+           1       0.98      0.83      0.90       208
+
+    accuracy                           0.90       386
+   macro avg       0.91      0.91      0.90       386
+weighted avg       0.91      0.90      0.90       386
+
+------------------------------------------------------------
+== Isotonic ==
+Best Threshold: 0.400 (F1=0.8982)
+Accuracy: 0.8990
+Precision: 0.9829
+Recall: 0.8269
+F1: 0.8982
+Brier: 0.07395
+AUC: 0.9557
+Confusion Matrix: [[175, 3], [36, 172]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.83      0.98      0.90       178
+           1       0.98      0.83      0.90       208
+
+    accuracy                           0.90       386
+   macro avg       0.91      0.91      0.90       386
+weighted avg       0.91      0.90      0.90       386
+
+------------------------------------------------------------

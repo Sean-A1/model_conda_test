@@ -1,0 +1,43 @@
+[TEST REPORT] pred_date=250801, match_id=ATL@CIN
+n_test=399
+
+== Sigmoid == (thr from valid = 0.390)
+Accuracy: 0.9098
+Precision: 0.9174
+Recall: 0.9174
+F1: 0.9174
+Brier: 0.05901
+AUC: 0.9729
+Confusion Matrix: [[163, 18], [18, 200]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.90      0.90      0.90       181
+           1       0.92      0.92      0.92       218
+
+    accuracy                           0.91       399
+   macro avg       0.91      0.91      0.91       399
+weighted avg       0.91      0.91      0.91       399
+
+------------------------------------------------------------
+== Isotonic == (thr from valid = 0.300)
+Accuracy: 0.8947
+Precision: 0.8860
+Recall: 0.9266
+F1: 0.9058
+Brier: 0.06169
+AUC: 0.9736
+Confusion Matrix: [[155, 26], [16, 202]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.91      0.86      0.88       181
+           1       0.89      0.93      0.91       218
+
+    accuracy                           0.89       399
+   macro avg       0.90      0.89      0.89       399
+weighted avg       0.90      0.89      0.89       399
+
+------------------------------------------------------------

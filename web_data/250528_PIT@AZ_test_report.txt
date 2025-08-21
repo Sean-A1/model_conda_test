@@ -1,0 +1,43 @@
+[TEST REPORT] pred_date=250528, match_id=PIT@AZ
+n_test=308
+
+== Sigmoid == (thr from valid = 0.400)
+Accuracy: 0.8766
+Precision: 0.8839
+Recall: 0.8726
+F1: 0.8782
+Brier: 0.07744
+AUC: 0.9542
+Confusion Matrix: [[133, 18], [20, 137]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.87      0.88      0.88       151
+           1       0.88      0.87      0.88       157
+
+    accuracy                           0.88       308
+   macro avg       0.88      0.88      0.88       308
+weighted avg       0.88      0.88      0.88       308
+
+------------------------------------------------------------
+== Isotonic == (thr from valid = 0.300)
+Accuracy: 0.8766
+Precision: 0.8839
+Recall: 0.8726
+F1: 0.8782
+Brier: 0.08014
+AUC: 0.9517
+Confusion Matrix: [[133, 18], [20, 137]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.87      0.88      0.88       151
+           1       0.88      0.87      0.88       157
+
+    accuracy                           0.88       308
+   macro avg       0.88      0.88      0.88       308
+weighted avg       0.88      0.88      0.88       308
+
+------------------------------------------------------------

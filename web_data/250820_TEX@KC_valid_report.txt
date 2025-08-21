@@ -1,0 +1,45 @@
+[VALID REPORT] pred_date=250820, match_id=TEX@KC
+n_valid=423
+
+== Sigmoid ==
+Best Threshold: 0.480 (F1=0.9258)
+Accuracy: 0.9220
+Precision: 0.9537
+Recall: 0.8996
+F1: 0.9258
+Brier: 0.06011
+AUC: 0.9684
+Confusion Matrix: [[184, 10], [23, 206]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.89      0.95      0.92       194
+           1       0.95      0.90      0.93       229
+
+    accuracy                           0.92       423
+   macro avg       0.92      0.92      0.92       423
+weighted avg       0.92      0.92      0.92       423
+
+------------------------------------------------------------
+== Isotonic ==
+Best Threshold: 0.380 (F1=0.9258)
+Accuracy: 0.9220
+Precision: 0.9537
+Recall: 0.8996
+F1: 0.9258
+Brier: 0.05496
+AUC: 0.9720
+Confusion Matrix: [[184, 10], [23, 206]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.89      0.95      0.92       194
+           1       0.95      0.90      0.93       229
+
+    accuracy                           0.92       423
+   macro avg       0.92      0.92      0.92       423
+weighted avg       0.92      0.92      0.92       423
+
+------------------------------------------------------------

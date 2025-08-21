@@ -1,0 +1,45 @@
+[VALID REPORT] pred_date=250625, match_id=TEX@BAL
+n_valid=344
+
+== Sigmoid ==
+Best Threshold: 0.440 (F1=0.8997)
+Accuracy: 0.8983
+Precision: 0.9075
+Recall: 0.8920
+F1: 0.8997
+Brier: 0.07885
+AUC: 0.9533
+Confusion Matrix: [[152, 16], [19, 157]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.89      0.90      0.90       168
+           1       0.91      0.89      0.90       176
+
+    accuracy                           0.90       344
+   macro avg       0.90      0.90      0.90       344
+weighted avg       0.90      0.90      0.90       344
+
+------------------------------------------------------------
+== Isotonic ==
+Best Threshold: 0.300 (F1=0.8997)
+Accuracy: 0.8983
+Precision: 0.9075
+Recall: 0.8920
+F1: 0.8997
+Brier: 0.07032
+AUC: 0.9588
+Confusion Matrix: [[152, 16], [19, 157]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.89      0.90      0.90       168
+           1       0.91      0.89      0.90       176
+
+    accuracy                           0.90       344
+   macro avg       0.90      0.90      0.90       344
+weighted avg       0.90      0.90      0.90       344
+
+------------------------------------------------------------

@@ -1,0 +1,43 @@
+[TEST REPORT] pred_date=250816, match_id=SEA@NYM
+n_test=420
+
+== Sigmoid == (thr from valid = 0.520)
+Accuracy: 0.9190
+Precision: 0.9581
+Recall: 0.8918
+F1: 0.9238
+Brier: 0.06854
+AUC: 0.9589
+Confusion Matrix: [[180, 9], [25, 206]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.88      0.95      0.91       189
+           1       0.96      0.89      0.92       231
+
+    accuracy                           0.92       420
+   macro avg       0.92      0.92      0.92       420
+weighted avg       0.92      0.92      0.92       420
+
+------------------------------------------------------------
+== Isotonic == (thr from valid = 0.400)
+Accuracy: 0.9190
+Precision: 0.9581
+Recall: 0.8918
+F1: 0.9238
+Brier: 0.07030
+AUC: 0.9550
+Confusion Matrix: [[180, 9], [25, 206]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.88      0.95      0.91       189
+           1       0.96      0.89      0.92       231
+
+    accuracy                           0.92       420
+   macro avg       0.92      0.92      0.92       420
+weighted avg       0.92      0.92      0.92       420
+
+------------------------------------------------------------

@@ -1,0 +1,45 @@
+[VALID REPORT] pred_date=250817, match_id=SEA@NYM
+n_valid=420
+
+== Sigmoid ==
+Best Threshold: 0.580 (F1=0.9314)
+Accuracy: 0.9310
+Precision: 0.9850
+Recall: 0.8834
+F1: 0.9314
+Brier: 0.05815
+AUC: 0.9703
+Confusion Matrix: [[194, 3], [26, 197]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.88      0.98      0.93       197
+           1       0.98      0.88      0.93       223
+
+    accuracy                           0.93       420
+   macro avg       0.93      0.93      0.93       420
+weighted avg       0.94      0.93      0.93       420
+
+------------------------------------------------------------
+== Isotonic ==
+Best Threshold: 0.400 (F1=0.9314)
+Accuracy: 0.9310
+Precision: 0.9850
+Recall: 0.8834
+F1: 0.9314
+Brier: 0.05242
+AUC: 0.9748
+Confusion Matrix: [[194, 3], [26, 197]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.88      0.98      0.93       197
+           1       0.98      0.88      0.93       223
+
+    accuracy                           0.93       420
+   macro avg       0.93      0.93      0.93       420
+weighted avg       0.94      0.93      0.93       420
+
+------------------------------------------------------------

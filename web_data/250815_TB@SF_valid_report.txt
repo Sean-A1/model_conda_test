@@ -1,0 +1,45 @@
+[VALID REPORT] pred_date=250815, match_id=TB@SF
+n_valid=416
+
+== Sigmoid ==
+Best Threshold: 0.580 (F1=0.9324)
+Accuracy: 0.9327
+Precision: 0.9847
+Recall: 0.8853
+F1: 0.9324
+Brier: 0.05631
+AUC: 0.9714
+Confusion Matrix: [[195, 3], [25, 193]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.89      0.98      0.93       198
+           1       0.98      0.89      0.93       218
+
+    accuracy                           0.93       416
+   macro avg       0.94      0.94      0.93       416
+weighted avg       0.94      0.93      0.93       416
+
+------------------------------------------------------------
+== Isotonic ==
+Best Threshold: 0.310 (F1=0.9327)
+Accuracy: 0.9327
+Precision: 0.9798
+Recall: 0.8899
+F1: 0.9327
+Brier: 0.04957
+AUC: 0.9761
+Confusion Matrix: [[194, 4], [24, 194]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.89      0.98      0.93       198
+           1       0.98      0.89      0.93       218
+
+    accuracy                           0.93       416
+   macro avg       0.93      0.93      0.93       416
+weighted avg       0.94      0.93      0.93       416
+
+------------------------------------------------------------

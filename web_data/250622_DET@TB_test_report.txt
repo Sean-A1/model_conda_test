@@ -1,0 +1,43 @@
+[TEST REPORT] pred_date=250622, match_id=DET@TB
+n_test=342
+
+== Sigmoid == (thr from valid = 0.620)
+Accuracy: 0.8860
+Precision: 0.9542
+Recall: 0.8202
+F1: 0.8822
+Brier: 0.07599
+AUC: 0.9587
+Confusion Matrix: [[157, 7], [32, 146]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.83      0.96      0.89       164
+           1       0.95      0.82      0.88       178
+
+    accuracy                           0.89       342
+   macro avg       0.89      0.89      0.89       342
+weighted avg       0.89      0.89      0.89       342
+
+------------------------------------------------------------
+== Isotonic == (thr from valid = 0.400)
+Accuracy: 0.8889
+Precision: 0.9545
+Recall: 0.8258
+F1: 0.8855
+Brier: 0.08083
+AUC: 0.9489
+Confusion Matrix: [[157, 7], [31, 147]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.84      0.96      0.89       164
+           1       0.95      0.83      0.89       178
+
+    accuracy                           0.89       342
+   macro avg       0.89      0.89      0.89       342
+weighted avg       0.90      0.89      0.89       342
+
+------------------------------------------------------------
