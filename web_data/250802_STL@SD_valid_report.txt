@@ -2,44 +2,23 @@
 n_valid=389
 
 == Sigmoid ==
-Best Threshold: 0.520 (F1=0.8917)
-Accuracy: 0.8895
-Precision: 0.9316
-Recall: 0.8551
-F1: 0.8917
-Brier: 0.08190
-AUC: 0.9522
-Confusion Matrix: [[169, 13], [30, 177]]
+Best Threshold: 0.410 (F1=0.9126)
+Accuracy: 0.9075
+Precision: 0.9171
+Recall: 0.9082
+F1: 0.9126
+Brier: 0.07696
+AUC: 0.9580
+Confusion Matrix: [[165, 17], [19, 188]]
 
 Classification Report:
               precision    recall  f1-score   support
 
-           0       0.85      0.93      0.89       182
-           1       0.93      0.86      0.89       207
+           0       0.90      0.91      0.90       182
+           1       0.92      0.91      0.91       207
 
-    accuracy                           0.89       389
-   macro avg       0.89      0.89      0.89       389
-weighted avg       0.89      0.89      0.89       389
-
-------------------------------------------------------------
-== Isotonic ==
-Best Threshold: 0.370 (F1=0.8917)
-Accuracy: 0.8895
-Precision: 0.9316
-Recall: 0.8551
-F1: 0.8917
-Brier: 0.07564
-AUC: 0.9571
-Confusion Matrix: [[169, 13], [30, 177]]
-
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.85      0.93      0.89       182
-           1       0.93      0.86      0.89       207
-
-    accuracy                           0.89       389
-   macro avg       0.89      0.89      0.89       389
-weighted avg       0.89      0.89      0.89       389
+    accuracy                           0.91       389
+   macro avg       0.91      0.91      0.91       389
+weighted avg       0.91      0.91      0.91       389
 
 ------------------------------------------------------------

@@ -1,43 +1,23 @@
 [TEST REPORT] pred_date=250725, match_id=WSH@MIN
 n_test=380
 
-== Sigmoid == (thr from valid = 0.610)
-Accuracy: 0.9237
-Precision: 0.9784
-Recall: 0.8786
-F1: 0.9258
-Brier: 0.06468
-AUC: 0.9643
-Confusion Matrix: [[170, 4], [25, 181]]
+== Sigmoid == (thr from valid = 0.650)
+Accuracy: 0.9158
+Precision: 0.9780
+Recall: 0.8641
+F1: 0.9175
+Brier: 0.06438
+AUC: 0.9645
+Confusion Matrix: [[170, 4], [28, 178]]
 
 Classification Report:
               precision    recall  f1-score   support
 
-           0       0.87      0.98      0.92       174
-           1       0.98      0.88      0.93       206
+           0       0.86      0.98      0.91       174
+           1       0.98      0.86      0.92       206
 
     accuracy                           0.92       380
-   macro avg       0.93      0.93      0.92       380
-weighted avg       0.93      0.92      0.92       380
-
-------------------------------------------------------------
-== Isotonic == (thr from valid = 0.300)
-Accuracy: 0.9237
-Precision: 0.9784
-Recall: 0.8786
-F1: 0.9258
-Brier: 0.06378
-AUC: 0.9627
-Confusion Matrix: [[170, 4], [25, 181]]
-
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.87      0.98      0.92       174
-           1       0.98      0.88      0.93       206
-
-    accuracy                           0.92       380
-   macro avg       0.93      0.93      0.92       380
-weighted avg       0.93      0.92      0.92       380
+   macro avg       0.92      0.92      0.92       380
+weighted avg       0.92      0.92      0.92       380
 
 ------------------------------------------------------------

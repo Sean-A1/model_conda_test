@@ -1,43 +1,23 @@
 [TEST REPORT] pred_date=250702, match_id=LAA@ATL
 n_test=349
 
-== Sigmoid == (thr from valid = 0.510)
-Accuracy: 0.8711
-Precision: 0.9294
-Recall: 0.8272
-F1: 0.8753
-Brier: 0.08184
-AUC: 0.9533
-Confusion Matrix: [[146, 12], [33, 158]]
+== Sigmoid == (thr from valid = 0.380)
+Accuracy: 0.8940
+Precision: 0.9096
+Recall: 0.8953
+F1: 0.9024
+Brier: 0.07989
+AUC: 0.9542
+Confusion Matrix: [[141, 17], [20, 171]]
 
 Classification Report:
               precision    recall  f1-score   support
 
-           0       0.82      0.92      0.87       158
-           1       0.93      0.83      0.88       191
+           0       0.88      0.89      0.88       158
+           1       0.91      0.90      0.90       191
 
-    accuracy                           0.87       349
-   macro avg       0.87      0.88      0.87       349
-weighted avg       0.88      0.87      0.87       349
-
-------------------------------------------------------------
-== Isotonic == (thr from valid = 0.430)
-Accuracy: 0.8797
-Precision: 0.9627
-Recall: 0.8115
-F1: 0.8807
-Brier: 0.08293
-AUC: 0.9485
-Confusion Matrix: [[152, 6], [36, 155]]
-
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.81      0.96      0.88       158
-           1       0.96      0.81      0.88       191
-
-    accuracy                           0.88       349
-   macro avg       0.89      0.89      0.88       349
-weighted avg       0.89      0.88      0.88       349
+    accuracy                           0.89       349
+   macro avg       0.89      0.89      0.89       349
+weighted avg       0.89      0.89      0.89       349
 
 ------------------------------------------------------------

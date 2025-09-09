@@ -1,43 +1,23 @@
 [TEST REPORT] pred_date=250704, match_id=PIT@SEA
 n_test=356
 
-== Sigmoid == (thr from valid = 0.650)
-Accuracy: 0.8989
-Precision: 0.9806
-Recall: 0.8216
-F1: 0.8941
-Brier: 0.06725
-AUC: 0.9651
-Confusion Matrix: [[168, 3], [33, 152]]
+== Sigmoid == (thr from valid = 0.450)
+Accuracy: 0.8961
+Precision: 0.9205
+Recall: 0.8757
+F1: 0.8975
+Brier: 0.07445
+AUC: 0.9608
+Confusion Matrix: [[157, 14], [23, 162]]
 
 Classification Report:
               precision    recall  f1-score   support
 
-           0       0.84      0.98      0.90       171
-           1       0.98      0.82      0.89       185
+           0       0.87      0.92      0.89       171
+           1       0.92      0.88      0.90       185
 
     accuracy                           0.90       356
-   macro avg       0.91      0.90      0.90       356
-weighted avg       0.91      0.90      0.90       356
-
-------------------------------------------------------------
-== Isotonic == (thr from valid = 0.400)
-Accuracy: 0.8989
-Precision: 0.9806
-Recall: 0.8216
-F1: 0.8941
-Brier: 0.07427
-AUC: 0.9566
-Confusion Matrix: [[168, 3], [33, 152]]
-
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.84      0.98      0.90       171
-           1       0.98      0.82      0.89       185
-
-    accuracy                           0.90       356
-   macro avg       0.91      0.90      0.90       356
-weighted avg       0.91      0.90      0.90       356
+   macro avg       0.90      0.90      0.90       356
+weighted avg       0.90      0.90      0.90       356
 
 ------------------------------------------------------------

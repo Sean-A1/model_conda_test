@@ -1,43 +1,23 @@
 [TEST REPORT] pred_date=250804, match_id=BAL@PHI
 n_test=403
 
-== Sigmoid == (thr from valid = 0.380)
-Accuracy: 0.9107
-Precision: 0.9167
-Recall: 0.9248
-F1: 0.9207
-Brier: 0.05888
-AUC: 0.9727
-Confusion Matrix: [[158, 19], [17, 209]]
+== Sigmoid == (thr from valid = 0.360)
+Accuracy: 0.9007
+Precision: 0.8974
+Recall: 0.9292
+F1: 0.9130
+Brier: 0.05970
+AUC: 0.9719
+Confusion Matrix: [[153, 24], [16, 210]]
 
 Classification Report:
               precision    recall  f1-score   support
 
-           0       0.90      0.89      0.90       177
-           1       0.92      0.92      0.92       226
+           0       0.91      0.86      0.88       177
+           1       0.90      0.93      0.91       226
 
-    accuracy                           0.91       403
-   macro avg       0.91      0.91      0.91       403
-weighted avg       0.91      0.91      0.91       403
-
-------------------------------------------------------------
-== Isotonic == (thr from valid = 0.300)
-Accuracy: 0.9107
-Precision: 0.9167
-Recall: 0.9248
-F1: 0.9207
-Brier: 0.06142
-AUC: 0.9724
-Confusion Matrix: [[158, 19], [17, 209]]
-
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.90      0.89      0.90       177
-           1       0.92      0.92      0.92       226
-
-    accuracy                           0.91       403
-   macro avg       0.91      0.91      0.91       403
-weighted avg       0.91      0.91      0.91       403
+    accuracy                           0.90       403
+   macro avg       0.90      0.90      0.90       403
+weighted avg       0.90      0.90      0.90       403
 
 ------------------------------------------------------------

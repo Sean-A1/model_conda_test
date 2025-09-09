@@ -1,43 +1,23 @@
 [TEST REPORT] pred_date=250820, match_id=TEX@KC
 n_test=425
 
-== Sigmoid == (thr from valid = 0.480)
-Accuracy: 0.9106
-Precision: 0.9204
-Recall: 0.9123
-F1: 0.9163
-Brier: 0.06336
-AUC: 0.9672
-Confusion Matrix: [[179, 18], [20, 208]]
+== Sigmoid == (thr from valid = 0.530)
+Accuracy: 0.9035
+Precision: 0.9474
+Recall: 0.8684
+F1: 0.9062
+Brier: 0.07778
+AUC: 0.9476
+Confusion Matrix: [[186, 11], [30, 198]]
 
 Classification Report:
               precision    recall  f1-score   support
 
-           0       0.90      0.91      0.90       197
-           1       0.92      0.91      0.92       228
+           0       0.86      0.94      0.90       197
+           1       0.95      0.87      0.91       228
 
-    accuracy                           0.91       425
-   macro avg       0.91      0.91      0.91       425
-weighted avg       0.91      0.91      0.91       425
-
-------------------------------------------------------------
-== Isotonic == (thr from valid = 0.380)
-Accuracy: 0.9106
-Precision: 0.9204
-Recall: 0.9123
-F1: 0.9163
-Brier: 0.06285
-AUC: 0.9631
-Confusion Matrix: [[179, 18], [20, 208]]
-
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       0.90      0.91      0.90       197
-           1       0.92      0.91      0.92       228
-
-    accuracy                           0.91       425
-   macro avg       0.91      0.91      0.91       425
-weighted avg       0.91      0.91      0.91       425
+    accuracy                           0.90       425
+   macro avg       0.90      0.91      0.90       425
+weighted avg       0.91      0.90      0.90       425
 
 ------------------------------------------------------------
